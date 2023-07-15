@@ -80,15 +80,3 @@ plt.ylabel('Year')
 plt.title('Distribution of Number of Attacks by Attack Type')
 plt.xticks(rotation=45)
 plt.show()
-'''
-# Geographic plot: Terrorist attacks worldwide
-world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-gdf = gpd.GeoDataFrame(data, geometry=gpd.points_from_xy(data['longitude'], data['latitude']))
-fig, ax = plt.subplots(figsize=(12, 8))
-world.boundary.plot(ax=ax, linewidth=0.8, color='black')
-gdf.plot(ax=ax, markersize=10, color='red', alpha=0.5)
-plt.title('Terrorist Attacks Worldwide')
-plt.xlabel('Longitude')
-plt.ylabel('Latitude')
-plt.show()
-'''
